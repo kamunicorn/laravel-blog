@@ -1,0 +1,1 @@
+<h2>Laravel blog</h2>
