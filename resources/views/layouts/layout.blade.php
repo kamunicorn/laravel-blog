@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
-    <title>Document</title>
+    <link rel="shortcut icon" href="{{asset('img/favicon.png')}}">
+    <title>{{ $title }}</title>
 </head>
 <body>
 
