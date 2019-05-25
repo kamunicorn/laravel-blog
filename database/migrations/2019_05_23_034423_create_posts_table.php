@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
 
             $table->string('title');
             $table->string('short_title');
-            $table->string('description');
+            $table->text('description');
             $table->bigInteger('author_id')->unsigned();
             $table->string('img')->nullable();
 

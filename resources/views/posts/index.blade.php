@@ -4,8 +4,17 @@
     @if (isset($_GET['search']))
         @if (count($posts) > 0)
             <h2>Результаты поиска по запросу "<?= $_GET['search'] ?>"</h2>
-            <p class="lead">Всего найдено {{ count($posts) }} постов</p>
-
+            @switch(count($posts) % 10)
+                @case(1)
+                    <p class="lead">Всего найден {{ count($posts) }} пост</p>
+                    @break
+                @case(2) @case(3) @case(4)
+                    <p class="lead">Всего найдено {{ count($posts) }} @if(count($posts) > 10) постов @else поста @endif</p>
+                    @break
+                @default
+                    <p class="lead">Всего найдено {{ count($posts) }} постов</p>
+                    @break
+            @endswitch
         @else
             <h2>По запросу "<?= $_GET['search'] ?>" ничего не найдено :(</h2>
             <a href="{{ route('post.index') }}" class="btn btn-primary">Отобразить все посты</a>

@@ -7,3 +7,11 @@
 <div class="form-group">
     <input name="img" type="file">
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+<script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
+<script>
+    $('textarea').ckeditor();
+    // $('.textarea').ckeditor(); // if class is prefered.
+</script>
